@@ -28,29 +28,3 @@ for document in load('data/data.xml'):
 writer.commit()
 
 
-
-
-
-
-
-
-
-
-index.reload()
-# config = index.config_reader(num_searchers=4)
-searcher = index.searcher()
-query = index.parse_query("Donald Trump Covid19", ["title", "body"])
-
-
-results = searcher.search(query, 5).hits
-
-
-
-for result in results:
-    score, address = result
-    doc = searcher.doc(address)
-    doc_id = doc['id'][0]
-    print(doc)
-    result = db[bin(doc_id)]
-    print(result)
-
