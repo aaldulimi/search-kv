@@ -1,5 +1,8 @@
 .DS_Store
 *.pyc
+log/*
+data/tantivy/*
+data/rdict/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
